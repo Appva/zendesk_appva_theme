@@ -1,13 +1,14 @@
 /***** Header *****/
-$header-height: 71px;
+$header-height: 160px;
+$top-header-height: 40px;
 
 .header {
-  @include max-width-container;
+  background-color: #F9FAFB;/*$background_color_alt*/;
   position: relative;
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: $header-height;
-  justify-content: space-between;
 }
 
 .logo img {
@@ -26,6 +27,32 @@ $header-height: 71px;
 
 .logo a:hover, .logo a:focus, .logo a:active {
   text-decoration: none;
+}
+
+.top-nav {
+  @include max-width-container;
+  display: flex;
+  justify-content: end;
+  &-wrapper {
+    height: $top-header-height;
+    background-color: $brand-background;
+    width: 100%;
+    padding: 8px 64px;
+  }
+  &-list {
+    text-transform: uppercase;
+    & > li > a {
+      font-size: $font-size-navigation;
+      color: $brand_color;
+    }
+  }
+}
+
+.nav-wrapper {
+  @include max-width-container;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
 }
 
 .user-nav {
@@ -55,7 +82,7 @@ $header-height: 71px;
 
       a {
         display: block;
-        margin: 20px;
+        margin: 20px;;
       }
     }
   }
@@ -82,6 +109,7 @@ $header-height: 71px;
 
     border: 0;
     color: $link_color;
+    text-transform: uppercase;
     display: none;
     font-size: 14px;
     padding: 0 20px 0 0;
@@ -253,4 +281,8 @@ $header-height: 71px;
     right: auto;
   }
   }
+}
+
+.wave {
+  width: 100%;
 }

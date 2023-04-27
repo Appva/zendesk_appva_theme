@@ -1,8 +1,6 @@
 /***** Hero component *****/
 .hero {
-  background-image: url($homepage_background_image);
-  background-position: center;
-  background-size: cover;
+  background-color: $background_color;
   height: 300px;
   padding: 0 20px;
   text-align: center;
@@ -12,5 +10,17 @@
     @include vertical-align;
     max-width: 610px;
     margin: 0 auto;
+
+    h2 {
+      font-size: $font-size-bigger;
+    }
+  }
+  &-name {
+    color: $brand_color;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-icon {
+    top: 6.8275rem;
   }
 }
