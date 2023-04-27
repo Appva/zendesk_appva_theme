@@ -1,3 +1,37 @@
+# Appva Theme 
+
+Theme for Appva Zendesk. Forked from [Zendesk Copenhagen Theme](https://github.com/zendesk/copenhagen_theme).
+
+## Developing
+
+Before we're getting started it's important to know that only css and js can be tested locally. Changes in handlebar-files will not have any effect until they are pushed and updated from Zendesk Helpcenter.
+
+To setup a local preview environment read the [guide](https://support.zendesk.com/hc/en-us/articles/4408822095642) for setting it up.
+
+### TLDR;
+
+* Get a Zendesk API token (talk to Christian H).
+* Install [ZAT](https://developer.zendesk.com/documentation/apps/zendesk-app-tools-zat/installing-and-using-zat).
+* From the root-directory in this repo run `zat theme preview` and type
+  * URL: https://apv4.zendesk.com
+  * Username: your.name@appva.com/token
+  * Password: Your Zendesk API token
+* Open a browser and go to the provided url (typically https://apv4.zendesk.com/hc/admin/local_preview/start)
+* Open a new terminal and go to this repo root-directory.
+* Run `yarn install`
+* Run `yarn start`
+* Make some change to a scss-file and refresh the browser page.
+
+### Troubleshooting
+
+You most likely need to allow "Insecure content" for your preview page. You can do that by clicking on the padlock to the left of the url-input and go to "Site settings" -> "Insecure content" - Allow
+
+ZAT preview doesn't like is refrences to `assets`-folder. The `_fonts.scss` have referenses to that folder so delete the row `@import "fonts";` in `index.scss`.
+
+More detailed information can be is described in the original `README.md` below.
+
+---
+
 # Copenhagen Theme by Zendesk
 
 The Copenhagen theme is the default Zendesk Guide theme. It is designed to be responsive and accessible.
