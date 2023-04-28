@@ -28,7 +28,7 @@
   &:focus,
   &.button-primary {
     background-color: $brand_color;
-    color: $brand_text_color;
+    color: $button-text-color;
     text-decoration: none;
   }
 
@@ -55,7 +55,7 @@
   background-color: $button-color;
   border: 0;
   border-radius: 4px;
-  color: #fff;
+  color: $button-text-color;
   font-size: 14px;
   line-height: 2.72;
   min-width: 190px;

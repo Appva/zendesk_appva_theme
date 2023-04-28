@@ -1,9 +1,9 @@
 /***** Header *****/
-$header-height: 160px;
+$header-height: 202px;
 $top-header-height: 40px;
 
 .header {
-  background-color: #F9FAFB;/*$background_color_alt*/;
+  background-color: #fff;
   position: relative;
   align-items: center;
   display: flex;
@@ -12,7 +12,7 @@ $top-header-height: 40px;
 }
 
 .logo img {
-  max-height: 37px;
+  max-height: 80px;
   vertical-align: middle;
 }
 
@@ -43,7 +43,13 @@ $top-header-height: 40px;
     text-transform: uppercase;
     & > li > a {
       font-size: $font-size-navigation;
+      font-weight: 500;
       color: $brand_color;
+      transition: opacity .2s ease-in-out;
+      &:hover {
+        text-decoration: none;
+        opacity: 0.75;
+      }
     }
   }
 }

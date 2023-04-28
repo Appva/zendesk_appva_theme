@@ -73,7 +73,7 @@ $padding-right: 20px;
 
     &:hover {
       background-color: $brand_color;
-      color: #fff;
+      color: $button-text-color;
     }
 
     &:focus {
