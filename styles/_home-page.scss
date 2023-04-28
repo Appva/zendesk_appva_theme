@@ -17,6 +17,9 @@
 .knowledge-base {
   background-color: $background_color_alt;
   padding: 2rem 0 4rem 0;
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 /***** Promoted articles *****/
@@ -67,6 +70,10 @@
 /***** Community section in homepage *****/
 .community {
   text-align: center;
+
+  h2 {
+    font-size: 2rem;
+  }
 
   &-image {
     min-height: 300px;

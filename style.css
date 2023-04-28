@@ -1212,15 +1212,13 @@ ul {
   max-width: 610px;
   margin: 0 auto;
 }
-.hero-inner h2 {
-  font-size: 1.5rem;
-}
 .hero-name {
   color: $brand_color;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 .hero .search-icon {
-  top: 6.8275rem;
+  top: 8.25rem;
 }
 
 .page-header {
@@ -1396,6 +1394,9 @@ ul {
   background-color: $background_color_alt;
   padding: 2rem 0 4rem 0;
 }
+.knowledge-base h2 {
+  font-size: 2rem;
+}
 
 /***** Promoted articles *****/
 .promoted-articles {
@@ -1446,6 +1447,9 @@ ul {
 .community {
   text-align: center;
 }
+.community h2 {
+  font-size: 2rem;
+}
 .community-image {
   min-height: 300px;
   margin-top: 32px;
@@ -1472,6 +1476,9 @@ ul {
 }
 
 /***** Recent activity *****/
+.recent-activity h2 {
+  font-size: 2rem;
+}
 .recent-activity-header {
   margin-bottom: 10px;
   text-align: center;

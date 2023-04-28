@@ -1,6 +1,9 @@
 /***** Recent activity *****/
 
 .recent-activity {
+  h2 {
+    font-size: 2rem;
+  }
   &-header {
     margin-bottom: 10px;
     text-align: center;
