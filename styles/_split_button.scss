@@ -11,7 +11,7 @@
   @extend .button;
   background-color: $brand_color;
   border: 0;
-  color: $brand_text_color;
+  color: $button-text-color;
   height: 32px;
   line-height: 16px;
   outline-color: $brand_color;
@@ -20,13 +20,13 @@
 .split-button button:not(:only-child) {
   &:first-child {
     [dir="rtl"] & {
-      border-left: 1px solid $brand_text_color;
+      border-left: 1px solid $button-text-color;
       border-top-left-radius: unset;
       border-bottom-left-radius: unset;
     }
 
     [dir="ltr"] & {
-      border-right: 1px solid $brand_text_color;
+      border-right: 1px solid $button-text-color;
       border-top-right-radius: unset;
       border-bottom-right-radius: unset;
     }

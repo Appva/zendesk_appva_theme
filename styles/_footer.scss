@@ -3,14 +3,19 @@
   margin-top: 4rem;
   padding: 1rem 0;
 
-  a {
+  a, span {
     color: $brand_text_color;
   }
 
   &-inner {
     @include max-width-container;
+    @include tablet {
+      flex-direction: row;
+    }
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
 
   &-language-selector button {
