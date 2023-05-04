@@ -3,11 +3,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+  @include mobile {
+    font-size: 80%;
+  }
+}
+
 body {
   background-color: $background_color;
   color: $text_color;
   font-family: $text_font;
-  font-size: $font-size-base;
   font-weight: $font-weight-normal;
   line-height: 1.5;
   -moz-osx-font-smoothing: grayscale;
@@ -36,7 +42,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h3 {

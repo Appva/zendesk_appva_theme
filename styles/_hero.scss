@@ -18,6 +18,9 @@
   }
 
   .search-icon {
-    top: 171px;
+    top: 88%;
+    @include mobile {
+      top: 86%;
+    }
   }
 }

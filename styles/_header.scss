@@ -1,5 +1,6 @@
 /***** Header *****/
 $header-height: 202px;
+$header-height-mobile: 158px;
 $top-header-height: 40px;
 
 .header {
@@ -9,11 +10,17 @@ $top-header-height: 40px;
   display: flex;
   flex-direction: column;
   height: $header-height;
+  @include mobile {
+    height: $header-height-mobile;
+  }
 }
 
 .logo img {
   max-height: 80px;
   vertical-align: middle;
+  @include mobile {
+    max-height: 50px;
+  }
 }
 
 .logo span {
@@ -38,6 +45,9 @@ $top-header-height: 40px;
     background-color: $brand-background;
     width: 100%;
     padding: 8px 64px;
+    @include mobile {
+      padding: 8px 16px;
+    }
   }
   &-list {
     text-transform: uppercase;
@@ -58,7 +68,12 @@ $top-header-height: 40px;
   @include max-width-container;
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  align-items: center;
+  margin-top: 1.5rem;
+  @include mobile {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 
 .user-nav {
