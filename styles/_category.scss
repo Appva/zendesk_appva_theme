@@ -35,15 +35,16 @@
   }
 
   .see-all-articles {
+    color: $brand_color;
     display: block;
-    padding: 15px 0;
+    padding: 8px 0;
   }
 }
 
 .article-list {
   &-item {
-    font-size: $font-size-bigger;
-    padding: 15px 0;
+    font-size: $font-size-base;
+    padding: 8px 0;
   }
 }
 

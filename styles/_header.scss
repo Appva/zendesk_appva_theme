@@ -1,6 +1,6 @@
 /***** Header *****/
 $header-height: 202px;
-$header-height-mobile: 158px;
+$header-height-mobile: 156px;
 $top-header-height: 40px;
 
 .header {
@@ -70,14 +70,12 @@ $top-header-height: 40px;
   justify-content: space-between;
   align-items: center;
   margin-top: 1.5rem;
-  @include mobile {
-    width: 100%;
-    margin-top: 1rem;
-  }
+  width: 100%;
 }
 
 .user-nav {
   @include tablet { position: relative; }
+  @include mobile { position: relative; }
   display: inline-block;
   position: absolute;
   white-space: nowrap;
@@ -119,11 +117,15 @@ $top-header-height: 40px;
 }
 
 .nav-wrapper-desktop {
-  @include mobile { display: none; }
-  @include tablet { display: none; }
+  @include mobile { display: inline-block; overflow: hidden; }
+  @include tablet { display: inline-block; }
   @include desktop { display: inline-block; }
 
   a {
+    @include mobile {
+      display: inline-block;
+      padding: 0 8px 0 0;
+    }
     @include tablet {
       display: inline-block;
     }
@@ -131,8 +133,7 @@ $top-header-height: 40px;
     border: 0;
     color: $link_color;
     text-transform: uppercase;
-    display: none;
-    font-size: 14px;
+    font-size: $font-size-navigation;
     padding: 0 20px 0 0;
     width: auto;
 
@@ -149,7 +150,10 @@ $top-header-height: 40px;
 }
 
 .nav-wrapper-mobile {
+  
   @include desktop { display: none; }
+  @include mobile { display: none; }
+  @include tablet { display: none; }
 
   .menu-button-mobile {
     background: none;

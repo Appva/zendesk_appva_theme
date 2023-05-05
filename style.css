@@ -246,15 +246,15 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
-}
-
-h2 {
   font-size: 2.5rem;
 }
 
-h3 {
+h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
@@ -671,7 +671,7 @@ ul {
 }
 @media (max-width: 768px) {
   .header {
-    height: 158px;
+    height: 156px;
   }
 }
 
@@ -744,17 +744,12 @@ ul {
   justify-content: space-between;
   align-items: center;
   margin-top: 1.5rem;
+  width: 100%;
 }
 @media (min-width: 1160px) {
   .nav-wrapper {
     padding: 0;
     width: 90%;
-  }
-}
-@media (max-width: 768px) {
-  .nav-wrapper {
-    width: 100%;
-    margin-top: 1rem;
   }
 }
 
@@ -764,6 +759,11 @@ ul {
   white-space: nowrap;
 }
 @media (min-width: 768px) {
+  .user-nav {
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
   .user-nav {
     position: relative;
   }
@@ -799,12 +799,13 @@ ul {
 
 @media (max-width: 768px) {
   .nav-wrapper-desktop {
-    display: none;
+    display: inline-block;
+    overflow: hidden;
   }
 }
 @media (min-width: 768px) {
   .nav-wrapper-desktop {
-    display: none;
+    display: inline-block;
   }
 }
 @media (min-width: 1024px) {
@@ -816,10 +817,15 @@ ul {
   border: 0;
   color: $link_color;
   text-transform: uppercase;
-  display: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 0 20px 0 0;
   width: auto;
+}
+@media (max-width: 768px) {
+  .nav-wrapper-desktop a {
+    display: inline-block;
+    padding: 0 8px 0 0;
+  }
 }
 @media (min-width: 768px) {
   .nav-wrapper-desktop a {
@@ -836,6 +842,16 @@ ul {
 }
 
 @media (min-width: 1024px) {
+  .nav-wrapper-mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .nav-wrapper-mobile {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
   .nav-wrapper-mobile {
     display: none;
   }
@@ -1087,7 +1103,6 @@ ul {
 .breadcrumbs {
   margin: 0 0 15px 0;
   padding: 0;
-  display: flex;
 }
 @media (min-width: 768px) {
   .breadcrumbs {
@@ -1096,6 +1111,7 @@ ul {
 }
 .breadcrumbs li {
   color: lighten($text_color, 20%);
+  display: inline;
   font-size: 1rem;
   max-width: 450px;
   overflow: hidden;
@@ -1249,17 +1265,22 @@ ul {
   max-width: 610px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .hero-inner {
+    white-space: nowrap;
+  }
+}
 .hero-name {
   color: $brand_color;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 .hero .search-icon {
-  top: 88%;
+  top: 87%;
 }
 @media (max-width: 768px) {
   .hero .search-icon {
-    top: 86%;
+    top: 85%;
   }
 }
 
@@ -1671,13 +1692,14 @@ ul {
   color: $text_color;
 }
 .section-tree .see-all-articles {
+  color: $brand_color;
   display: block;
-  padding: 15px 0;
+  padding: 8px 0;
 }
 
 .article-list-item {
-  font-size: 1.5rem;
-  padding: 15px 0;
+  font-size: 1rem;
+  padding: 8px 0;
 }
 
 .icon-star {

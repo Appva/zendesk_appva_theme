@@ -7,6 +7,9 @@
   width: 100%;
 
   &-inner {
+    @include mobile {
+      white-space: nowrap;
+    }
     @include vertical-align;
     max-width: 610px;
     margin: 0 auto;
@@ -18,9 +21,9 @@
   }
 
   .search-icon {
-    top: 88%;
+    top: 87%;
     @include mobile {
-      top: 86%;
+      top: 85%;
     }
   }
 }
