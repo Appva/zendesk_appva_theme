@@ -16,10 +16,10 @@ $top-header-height: 40px;
 }
 
 .logo img {
-  max-height: 80px;
+  height: 80px;
   vertical-align: middle;
   @include mobile {
-    max-height: 50px;
+    height: 50px;
   }
 }
 
@@ -116,6 +116,7 @@ $top-header-height: 40px;
 
     > a.submit-a-request {
       text-transform: uppercase;
+      font-weight: $font-weight-bold;
       @include mobile {
         line-height: 2.34;
         padding: 0 20px;

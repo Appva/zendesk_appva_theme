@@ -428,7 +428,7 @@ ul {
   color: #fff;
   font-size: 14px;
   line-height: 2.92;
-  min-width: 190px;
+  min-width: 175px;
   padding: 0 1.9286em;
   width: 100%;
 }
@@ -676,12 +676,12 @@ ul {
 }
 
 .logo img {
-  max-height: 80px;
+  height: 80px;
   vertical-align: middle;
 }
 @media (max-width: 768px) {
   .logo img {
-    max-height: 50px;
+    height: 50px;
   }
 }
 
@@ -798,6 +798,7 @@ ul {
 }
 .user-nav-list > li > a.submit-a-request {
   text-transform: uppercase;
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   .user-nav-list > li > a.submit-a-request {
