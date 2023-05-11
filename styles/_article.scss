@@ -34,8 +34,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     margin-top: 20px;
+    > h1 {
+      margin-bottom: 0;
+    }
   }
 
   &-avatar {
@@ -43,7 +46,7 @@
   }
 
   &-author {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   &-title {
@@ -84,7 +87,7 @@
 
   &-content {
     line-height: 1.6;
-    margin: 40px 0;
+    margin: 20px 0;
     word-wrap: break-word;
   }
 

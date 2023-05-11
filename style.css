@@ -384,7 +384,7 @@ ul {
 .button, .pagination-next-link, .pagination-prev-link, .pagination-first-link, .pagination-last-link, .subscriptions-subscribe button, .requests-table-toolbar .organization-subscribe button, .community-follow button, .article-subscribe button, .section-subscribe button, .split-button button {
   background-color: transparent;
   border: 1px solid $brand_color;
-  border-radius: 4px;
+  border-radius: 24px;
   color: $brand_color;
   cursor: pointer;
   display: inline-block;
@@ -413,8 +413,8 @@ ul {
   text-decoration: none;
 }
 .button.button-primary:hover, .button-primary.pagination-next-link:hover, .button-primary.pagination-prev-link:hover, .button-primary.pagination-first-link:hover, .button-primary.pagination-last-link:hover, .subscriptions-subscribe button.button-primary:hover, .subscriptions-subscribe button[data-selected=true]:hover, .requests-table-toolbar .organization-subscribe button.button-primary:hover, .requests-table-toolbar .organization-subscribe button[data-selected=true]:hover, .community-follow button.button-primary:hover, .article-subscribe button.button-primary:hover, .article-subscribe button[data-selected=true]:hover, .section-subscribe button.button-primary:hover, .section-subscribe button[data-selected=true]:hover, .split-button button:hover, .button.button-primary:focus, .button-primary.pagination-next-link:focus, .button-primary.pagination-prev-link:focus, .button-primary.pagination-first-link:focus, .button-primary.pagination-last-link:focus, .subscriptions-subscribe button.button-primary:focus, .subscriptions-subscribe button[data-selected=true]:focus, .requests-table-toolbar .organization-subscribe button.button-primary:focus, .requests-table-toolbar .organization-subscribe button[data-selected=true]:focus, .community-follow button.button-primary:focus, .article-subscribe button.button-primary:focus, .article-subscribe button[data-selected=true]:focus, .section-subscribe button.button-primary:focus, .section-subscribe button[data-selected=true]:focus, .split-button button.button-primary:focus, .button.button-primary:active, .button-primary.pagination-next-link:active, .button-primary.pagination-prev-link:active, .button-primary.pagination-first-link:active, .button-primary.pagination-last-link:active, .subscriptions-subscribe button.button-primary:active, .subscriptions-subscribe button[data-selected=true]:active, .requests-table-toolbar .organization-subscribe button.button-primary:active, .requests-table-toolbar .organization-subscribe button[data-selected=true]:active, .community-follow button.button-primary:active, .article-subscribe button.button-primary:active, .article-subscribe button[data-selected=true]:active, .section-subscribe button.button-primary:active, .section-subscribe button[data-selected=true]:active, .split-button button.button-primary:active {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: lighten($brand_color, 5%);
+  border-color: lighten($brand_color, 5%);
 }
 .button[data-disabled], [data-disabled].pagination-next-link, [data-disabled].pagination-prev-link, [data-disabled].pagination-first-link, [data-disabled].pagination-last-link, .subscriptions-subscribe button[data-disabled], .requests-table-toolbar .organization-subscribe button[data-disabled], .community-follow button[data-disabled], .article-subscribe button[data-disabled], .section-subscribe button[data-disabled], .split-button button[data-disabled] {
   cursor: default;
@@ -424,10 +424,10 @@ ul {
   cursor: pointer;
   background-color: $brand_color;
   border: 0;
-  border-radius: 4px;
+  border-radius: 24px;
   color: #fff;
   font-size: 14px;
-  line-height: 2.72;
+  line-height: 2.92;
   min-width: 190px;
   padding: 0 1.9286em;
   width: 100%;
@@ -438,10 +438,10 @@ ul {
   }
 }
 .button-large:visited, input[type=submit]:visited {
-  color: $brand_text_color;
+  color: #fff;
 }
 .button-large:hover, .button-large:active, .button-large:focus, input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
-  background-color: darken($brand_color, 20%);
+  background-color: lighten($brand_color, 5%);
 }
 .button-large[disabled], input[type=submit][disabled] {
   background-color: #ddd;
@@ -796,6 +796,17 @@ ul {
 .user-nav-list > li {
   display: inline-block;
 }
+.user-nav-list > li > a.submit-a-request {
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .user-nav-list > li > a.submit-a-request {
+    line-height: 2.34;
+    padding: 0 20px;
+    font-size: 12px;
+    min-width: auto;
+  }
+}
 
 @media (max-width: 768px) {
   .nav-wrapper-desktop {
@@ -813,7 +824,7 @@ ul {
     display: inline-block;
   }
 }
-.nav-wrapper-desktop a {
+.nav-wrapper-desktop a:not(.button):not(.pagination-next-link):not(.pagination-prev-link):not(.pagination-first-link):not(.pagination-last-link) {
   border: 0;
   color: $link_color;
   text-transform: uppercase;
@@ -822,20 +833,20 @@ ul {
   width: auto;
 }
 @media (max-width: 768px) {
-  .nav-wrapper-desktop a {
+  .nav-wrapper-desktop a:not(.button):not(.pagination-next-link):not(.pagination-prev-link):not(.pagination-first-link):not(.pagination-last-link) {
     display: inline-block;
     padding: 0 8px 0 0;
   }
 }
 @media (min-width: 768px) {
-  .nav-wrapper-desktop a {
+  .nav-wrapper-desktop a:not(.button):not(.pagination-next-link):not(.pagination-prev-link):not(.pagination-first-link):not(.pagination-last-link) {
     display: inline-block;
   }
 }
-[dir=rtl] .nav-wrapper-desktop a {
+[dir=rtl] .nav-wrapper-desktop a:not(.button):not(.pagination-next-link):not(.pagination-prev-link):not(.pagination-first-link):not(.pagination-last-link) {
   padding: 0 0 0 20px;
 }
-.nav-wrapper-desktop a:hover, .nav-wrapper-desktop a:focus, .nav-wrapper-desktop a:active {
+.nav-wrapper-desktop a:not(.button):not(.pagination-next-link):not(.pagination-prev-link):not(.pagination-first-link):not(.pagination-last-link):hover, .nav-wrapper-desktop a:not(.button):not(.pagination-next-link):not(.pagination-prev-link):not(.pagination-first-link):not(.pagination-last-link):focus, .nav-wrapper-desktop a:not(.button):not(.pagination-next-link):not(.pagination-prev-link):not(.pagination-first-link):not(.pagination-last-link):active {
   background-color: transparent;
   color: $link_color;
   text-decoration: underline;
@@ -1257,17 +1268,20 @@ ul {
   padding: 0 20px;
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.hero-inner {
+.hero-search {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 610px;
+  width: 610px;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
-  .hero-inner {
+  .hero-search {
     white-space: nowrap;
+    max-width: 100%;
   }
 }
 .hero-name {
@@ -1276,12 +1290,7 @@ ul {
   margin-bottom: 0.5rem;
 }
 .hero .search-icon {
-  top: 87%;
-}
-@media (max-width: 768px) {
-  .hero .search-icon {
-    top: 85%;
-  }
+  top: 50%;
 }
 
 .page-header {
@@ -1541,7 +1550,6 @@ ul {
 
 .community,
 .activity {
-  border-top: 1px solid #ddd;
   padding: 30px 0;
 }
 
@@ -1781,7 +1789,7 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   margin-top: 20px;
 }
 @media (min-width: 768px) {
@@ -1790,11 +1798,14 @@ ul {
     margin-top: 0;
   }
 }
+.article-header > h1 {
+  margin-bottom: 0;
+}
 .article-avatar {
   margin-right: 10px;
 }
 .article-author {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .article-title {
@@ -1932,7 +1943,7 @@ ul {
 }
 .article-content {
   line-height: 1.6;
-  margin: 40px 0;
+  margin: 20px 0;
   word-wrap: break-word;
 }
 .article-footer {
@@ -2442,7 +2453,7 @@ ul {
 }
 
 .vote-voted:hover {
-  color: darken($brand_color, 20%);
+  color: lighten($brand_color, 5%);
 }
 
 /***** Actions *****/
@@ -2580,8 +2591,8 @@ ul {
   color: $brand_text_color;
 }
 .community-follow button[data-selected=true]:hover {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: lighten($brand_color, 5%);
+  border-color: lighten($brand_color, 5%);
 }
 .community-follow button::after {
   border-left: 1px solid $brand_color;

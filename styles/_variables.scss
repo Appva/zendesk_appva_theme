@@ -1,7 +1,7 @@
 // Variables
 
 // Colors
-$hover-button-color: zass-darken($brand_color, 20%);
+$hover-button-color: zass-lighten($brand_color, 5%);
 $secondary-text-color: zass-lighten($text_color, 20%);
 
 $primary-shade: zass-darken($background_color, 3%); //#f8f8f8 for the default background_color
